@@ -12,8 +12,8 @@
 
     <ImageButton
         android:id="@+id/helpButton"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
         android:background="@drawable/roundedbutton"
         android:contentDescription="obrazek"
         android:padding="5dp"
@@ -22,30 +22,28 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/helpText"
-        android:text="HELP"
-        android:textColor="#ffffff"
-        android:textSize="75sp"
-        android:background="#ff0000"
-        style="@style/AppTheme"
-        android:layout_alignTop="@+id/helpButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
         android:id="@+id/settingButton"
         android:textColor="#ffffff"
+        android:background="@drawable/button"
         android:padding="20dp"
-        android:background="@android:color/transparent"
         android:textSize="35sp"
         android:onClick="settingsOnClick"
         android:layout_marginBottom="39dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP"
+        android:id="@+id/helpText"
+        android:textColor="#ffffff"
+        android:textSize="70sp"
+        android:layout_alignBottom="@+id/helpButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="89dp" />
 </RelativeLayout>
