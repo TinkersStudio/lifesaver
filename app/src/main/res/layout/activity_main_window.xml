@@ -10,8 +10,6 @@
     tools:context="app.dqtrinh.lifesaver.MainWindow"
     android:background="#000000">
 
-    <?xml version="1.0" encoding="utf-8"?>
-
     <ImageButton
         android:id="@+id/helpButton"
         android:layout_width="300dp"
@@ -20,18 +18,34 @@
         android:contentDescription="obrazek"
         android:padding="5dp"
         android:onClick="onClick"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/helpText"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:text="HELP"
         android:textColor="#ffffff"
-        android:textSize="80sp"
+        android:textSize="95sp"
         android:background="#ff0000"
-        style="@style/AppTheme" />
+        style="@style/AppTheme"
+        android:layout_alignBottom="@+id/helpButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="102dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:id="@+id/settingButton"
+        android:textColor="#ffffff"
+        android:background="#000000"
+        android:padding="20dp"
+        android:textColorHighlight="#ffffff"
+        android:textSize="35sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="settingsOnClick" />
 </RelativeLayout>
