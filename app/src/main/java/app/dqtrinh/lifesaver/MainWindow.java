@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainWindow extends AppCompatActivity {
     //update something in here
+
     protected Button help;
     protected Button setting;
 
