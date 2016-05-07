@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">LifeSaver</string>
+    <string name="app_name">Life Saver</string>
+    <string name="button_setting">Setting</string>
 </resources>
