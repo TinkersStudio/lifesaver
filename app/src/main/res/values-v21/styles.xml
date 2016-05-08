@@ -6,4 +6,8 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="LifeSaver" parent="android:Theme.Material.Wallpaper" >
+        <item name="android:colorPrimary">@color/design_textinput_error_color_light</item>
+    </style>
 </resources>
