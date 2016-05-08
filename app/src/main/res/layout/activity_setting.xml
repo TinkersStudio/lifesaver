@@ -9,17 +9,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="app.dqtrinh.lifesaver.Setting"
-    android:background="@drawable/help">
+    android:background="#ffffff">
 
-    <EditText
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/messageField"
-        android:layout_marginBottom="39dp"
-        android:text="HELP NOW! I am stuck in traffic, and I feel like my heart is throbbing really hard. Please send for help, I am getting worried."
-        android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/scrollView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,75 +23,82 @@
         android:text="Name"
         android:ems="10"
         android:id="@+id/nameField"
-        android:layout_marginTop="41dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/messageField"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/border"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name :"
         android:id="@+id/nameText"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
         android:layout_alignTop="@+id/nameField"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact : "
+        android:id="@+id/textView"
+        android:layout_below="@+id/nameField"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/phoneNumber"
-        android:layout_marginTop="40dp"
-        android:textColor="#ffffff"
+        android:id="@+id/phoneField"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignStart="@+id/nameField"
         android:text="(123)456-7890"
-        android:textIsSelectable="false"
-        android:textSize="20sp"
-        android:layout_below="@+id/nameField"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/border" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fbIcon"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/fbicon"
+        android:layout_below="@+id/phoneField"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:id="@+id/fbURL"
+        android:text="https://www.facebook.com/user_profile"
+        android:layout_alignTop="@+id/fbIcon"
+        android:layout_toEndOf="@+id/fbIcon"
+        android:textSize="12sp"
+        android:background="@drawable/border" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Message:"
-        android:id="@+id/messageText"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textIsSelectable="false"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/fbIcon"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/messageField" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact: "
-        android:id="@+id/textView"
-        android:textColor="#ffffff"
-        android:textSize="28sp"
-        android:layout_alignTop="@+id/phoneNumber"
-        android:layout_toStartOf="@+id/phoneNumber" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/fbicon"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/nameField"
-        android:layout_alignEnd="@+id/nameText"
-        android:layout_alignTop="@+id/nameText" />
+        android:layout_marginTop="73dp"
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:text="https://www.facebook.com/name.lastname.1"
-        android:textColor="#ffffff"
-        android:layout_above="@+id/messageText"
-        android:layout_alignStart="@+id/phoneNumber"
-        android:layout_marginBottom="28dp" />
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:text="Please type your message here."
+        android:layout_alignEnd="@+id/fbURL"
+        android:background="@drawable/border" />
+
 </RelativeLayout>

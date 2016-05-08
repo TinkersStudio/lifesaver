@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Setting">
+        <activity android:name=".Setting"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <meta-data
             android:name="com.google.android.gms.version"
