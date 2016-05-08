@@ -90,7 +90,7 @@
         android:text="Insurance :"
         android:id="@+id/insuranceText"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:layout_below="@+id/textView2"
         android:layout_toEndOf="@+id/scrollView" />
 
@@ -103,18 +103,19 @@
         android:layout_alignEnd="@+id/phoneField"
         android:layout_toEndOf="@+id/insuranceText"
         android:layout_gravity="center|left"
-        android:layout_alignStart="@+id/phoneField" />
+        android:layout_alignStart="@+id/phoneField"
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Med Num :"
         android:id="@+id/mednumberText"
-        android:layout_marginTop="21dp"
-        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
         android:textColor="#000000"
         android:layout_below="@+id/insuranceText"
-        android:layout_alignEnd="@+id/insuranceText" />
+        android:layout_toEndOf="@+id/scrollView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -125,7 +126,8 @@
         android:layout_alignBottom="@+id/mednumberText"
         android:layout_alignStart="@+id/editText"
         android:background="@drawable/border"
-        android:layout_alignTop="@+id/mednumberText" />
+        android:layout_alignTop="@+id/mednumberText"
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -135,15 +137,15 @@
         android:textSize="30sp"
         android:textColor="#000000"
         android:layout_marginTop="21dp"
-        android:layout_below="@+id/editText3"
-        android:layout_toEndOf="@+id/mednumberText" />
+        android:layout_below="@+id/addressField"
+        android:layout_alignStart="@+id/profileText" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address :"
         android:id="@+id/addressField"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textColor="#000000"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/mednumberText"
@@ -156,7 +158,8 @@
         android:layout_alignBottom="@+id/addressField"
         android:layout_alignStart="@+id/editText2"
         android:layout_alignEnd="@+id/editText2"
-        android:background="@drawable/border" />
+        android:background="@drawable/border"
+        android:textSize="30sp" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -164,7 +167,8 @@
         android:id="@+id/editText4"
         android:background="@drawable/border"
         android:layout_below="@+id/textView3"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="30sp" />
 
     <ImageView
         android:layout_width="50dp"
@@ -187,9 +191,9 @@
         android:layout_height="wrap_content"
         android:text="Contacts"
         android:id="@+id/contactButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/editText4"
         android:onClick="contactOnClick"
-        android:background="@drawable/borderbutton"/>
+        android:background="@drawable/borderbutton"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
