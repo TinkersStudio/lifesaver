@@ -13,8 +13,9 @@ public class MainWindow extends AppCompatActivity {
 
     protected ImageButton help;
     protected Button setting;
-    public LocationManager locationManager;
-
+    private GPSTracker gps;
+    protected double longtitude, lattitude;
+    public String locationText;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -23,51 +24,73 @@ public class MainWindow extends AppCompatActivity {
     public void editSetting() {
 
         setting = (Button) findViewById(R.id.settingButton);
-        help = (ImageButton) findViewById(R.id.helpButton);
-        //locationManager = new LocationManager();
-        //TODO: set the location
-        //if()
-
-
         setting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent settingWindow = new Intent(MainWindow.this, Setting.class);
                 startActivity(settingWindow);
             }
         });
+    }
 
+    public void sendMessage()
+    {
+        help = (ImageButton) findViewById(R.id.helpButton);
+        gps = new GPSTracker(MainWindow.this);
         help.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //TODO: make the call to twilio
+                locationText = this.sendLocationText();
+                lattitude = this.latitude();
+                longtitude = this.longitude();
 
                 //TODO: make the call to facebook
-                //TODO: Contact autority
+                //TODO: Contact authority
+            }
+
+
+            /**
+             *
+             * @return location of the user
+             */
+            private String sendLocationText() {
+                String location = null;
+                if(gps.canGetLocation()){
+                    double latitude = gps.getLatitude();
+                    double longitude = gps.getLongitude();
+
+                    // \n is for new line
+                    location =  "Your Location is - \nLat: " + latitude + "\nLong: "
+                            + longitude;
+                }
+                else
+                {
+                    location = "Location is unknown";
+                }
+                return location;
+            }
+
+            private double longitude()
+            {
+                if(gps.canGetLocation()){
+                    return gps.getLongitude();
+                }
+                return 0;
+            }
+
+            private double latitude()
+            {
+                if(gps.canGetLocation()){
+                    return gps.getLatitude();
+                }
+                return 0;
             }
         });
     }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_window);
         editSetting();
-
+        sendMessage();
     }
-
-    /**
-     *
-     * @return location of the user
-     */
-    private String sendLocation()
-    {
-        return null;
-        //use GPS_PROVIDER
-    }
-
-    private boolean isLocationEnabled() {
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
-                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-    }
-
 }
