@@ -40,7 +40,6 @@ public class MainWindow extends AppCompatActivity {
      */
 
     public void editSetting() {
-
         setting = (Button) findViewById(R.id.settingButton);
         setting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -123,10 +122,10 @@ public class MainWindow extends AppCompatActivity {
         final SmsFactory messageFactory = account.getSmsFactory();
         final List<NameValuePair> messageParams = new ArrayList<NameValuePair>();
         // Replace with a valid phone number
-        messageParams.add(new BasicNameValuePair("To", "7608085735"));
+        messageParams.add(new BasicNameValuePair("To", "+17608085735"));
         // Replace with a valid phone number in your account
         //+1 if possible
-        messageParams.add(new BasicNameValuePair("From", "7602922950"));
+        messageParams.add(new BasicNameValuePair("From", "+17602922950"));
         messageParams.add(new BasicNameValuePair("Body", "This is a test message!"));
 
 
