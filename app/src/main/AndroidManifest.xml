@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- needed to enable/disable the speakerphone -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <!-- needed to receive audio from microphone during a call -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
