@@ -10,7 +10,8 @@ import android.widget.ImageButton;
 
 public class MainWindow extends AppCompatActivity {
     //update something in here
-
+    public static final String ACCOUNT_SID = "AC848a9e2ee6791d8e7f64f86622e81321";
+    public static final String AUTH_TOKEN = "c39fa3a423819cfffa2ceac436bde083";
     protected ImageButton help;
     protected Button setting;
     private GPSTracker gps;
@@ -42,7 +43,7 @@ public class MainWindow extends AppCompatActivity {
                 locationText = this.sendLocationText();
                 lattitude = this.latitude();
                 longtitude = this.longitude();
-
+                sendSMS();
                 //TODO: make the call to facebook
                 //TODO: Contact authority
             }
@@ -92,5 +93,9 @@ public class MainWindow extends AppCompatActivity {
         setContentView(R.layout.activity_main_window);
         editSetting();
         sendMessage();
+    }
+
+    public void sendSMS(){
+
     }
 }

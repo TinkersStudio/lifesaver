@@ -7,6 +7,15 @@
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- needed for monitoring network availability -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- needed for processing on the network -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- needed to enable/disable the speakerphone -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- needed to receive audio from microphone during a call -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
 
     <application
