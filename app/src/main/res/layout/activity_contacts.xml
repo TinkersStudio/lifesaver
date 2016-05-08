@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email : "
+        android:id="@+id/emailText"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/editText5"
+        android:layout_alignStart="@+id/phoneText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:id="@+id/contactView"
+        android:textSize="45sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/scrollView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primary Contact"
+        android:id="@+id/primaryText"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_above="@+id/phoneText"
+        android:layout_alignEnd="@+id/contactView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secondary Contact"
+        android:id="@+id/secondaryText"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/emailText"
+        android:layout_alignEnd="@+id/primaryText" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/new_icon"
+        android:layout_marginEnd="24dp"
+        android:layout_above="@+id/primaryText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="11dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        android:id="@+id/phoneText"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_above="@+id/editText5"
+        android:layout_toEndOf="@+id/scrollView2"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        android:id="@+id/textView4"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/secondaryText"
+        android:layout_alignStart="@+id/emailText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email : "
+        android:id="@+id/textView5"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/new_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/phoneText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:background="@drawable/border"
+        android:textSize="20sp"
+        android:layout_below="@+id/editText6"
+        android:layout_alignEnd="@+id/editText6"
+        android:layout_marginTop="34dp"
+        android:layout_alignStart="@+id/editText6" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:background="@drawable/border"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignStart="@+id/editText6"
+        android:textSize="20sp"
+        android:layout_alignEnd="@+id/editText5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:background="@drawable/border"
+        android:textSize="20sp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/contactView"
+        android:layout_alignEnd="@+id/imageView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText8"
+        android:background="@drawable/border"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/editText7"
+        android:textSize="20sp"
+        android:layout_alignEnd="@+id/editText7" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/fbicon"
+        android:layout_below="@+id/editText8"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
