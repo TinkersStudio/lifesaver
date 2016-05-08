@@ -52,13 +52,13 @@ public class MainWindow extends AppCompatActivity {
     public void sendMessage()
     {
         help = (ImageButton) findViewById(R.id.helpButton);
-        gps = new GPSTracker(MainWindow.this);
+        //gps = new GPSTracker(MainWindow.this);
         help.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //TODO: make the call to twilio
-                locationText = this.sendLocationText();
-                lattitude = this.latitude();
-                longtitude = this.longitude();
+                //locationText = this.sendLocationText();
+                //lattitude = this.latitude();
+                //longtitude = this.longitude();
                 ArrayList<String> primaryContact = new ArrayList<String>();
                 ArrayList<String> secondaryContact = new ArrayList<String>();
                 sendSMS("something", "something", "something",
@@ -131,13 +131,13 @@ public class MainWindow extends AppCompatActivity {
 
         try
         {
-            messageFactory.create(messageParams);
+            com.twilio.sdk.resource.instance.Message sms = messageFactory.create(messageParams);
             //resp.getWriter().print(sms.getBody());
         }
         catch (TwilioRestException e)
         {
             //throw new Exception("Twilio error");
-
+            System.out.println("Error somewhere");
         }
     }
 
