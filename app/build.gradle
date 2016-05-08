@@ -26,4 +26,7 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile files('libs/twilio-client-android.jar')
+    compile files('libs/twilio-java-sdk-3.3.12.jar')
+    compile files('libs/twilio-java-sdk-3.4.2.jar')
+    compile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
 }
