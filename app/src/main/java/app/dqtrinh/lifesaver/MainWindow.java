@@ -119,7 +119,7 @@ public class MainWindow extends AppCompatActivity {
         //set the setup for sender
 
         // Send an SMS (Requires version 3.4+)
-        final SmsFactory messageFactory = account.getSmsFactory();
+        final MessageFactory messageFactory = account.getMessageFactory();
         final List<NameValuePair> messageParams = new ArrayList<NameValuePair>();
         // Replace with a valid phone number
         messageParams.add(new BasicNameValuePair("To", "+17608085735"));
@@ -131,7 +131,7 @@ public class MainWindow extends AppCompatActivity {
 
         try
         {
-            messageFactory.create((Map<String, String>) messageParams);
+            messageFactory.create(messageParams);
             //resp.getWriter().print(sms.getBody());
         }
         catch (TwilioRestException e)
