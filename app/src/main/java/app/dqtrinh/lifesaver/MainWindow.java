@@ -19,6 +19,9 @@ import com.twilio.sdk.resource.factory.*;
 import com.twilio.sdk.resource.instance.*;
 import com.twilio.sdk.resource.list.*;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
 
 public class MainWindow extends AppCompatActivity {
     //update something in here
@@ -128,11 +131,12 @@ public class MainWindow extends AppCompatActivity {
         try
         {
             com.twilio.sdk.resource.instance.Message sms = messageFactory.create(params);
-            resp.getWriter().print(sms.getBody());
+            //resp.getWriter().print(sms.getBody());
         }
         catch (TwilioRestException e)
         {
-            throw new ServletException("Twilio error", e);
+            //throw new Exception("Twilio error");
+
         }
     }
 
