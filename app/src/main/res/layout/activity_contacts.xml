@@ -103,7 +103,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
+        android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/editText5"
         android:background="@drawable/border"
@@ -128,7 +128,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="phone"
         android:ems="10"
         android:id="@+id/editText6"
         android:background="@drawable/border"
@@ -150,11 +150,4 @@
         android:textSize="20sp"
         android:layout_alignEnd="@+id/editText7" />
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/imageView5"
-        android:src="@drawable/fbicon"
-        android:layout_below="@+id/editText8"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>

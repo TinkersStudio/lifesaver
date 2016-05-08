@@ -41,7 +41,6 @@ public class MainWindow extends AppCompatActivity {
      */
 
     public void editSetting() {
-
         setting = (Button) findViewById(R.id.settingButton);
         setting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -54,13 +53,13 @@ public class MainWindow extends AppCompatActivity {
     public void sendMessage()
     {
         help = (ImageButton) findViewById(R.id.helpButton);
-        gps = new GPSTracker(MainWindow.this);
+        //gps = new GPSTracker(MainWindow.this);
         help.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //TODO: make the call to twilio
-                locationText = this.sendLocationText();
-                lattitude = this.latitude();
-                longtitude = this.longitude();
+                //locationText = this.sendLocationText();
+                //lattitude = this.latitude();
+                //longtitude = this.longitude();
                 ArrayList<String> primaryContact = new ArrayList<String>();
                 ArrayList<String> secondaryContact = new ArrayList<String>();
                 sendSMS("something", "something", "something",
@@ -121,10 +120,13 @@ public class MainWindow extends AppCompatActivity {
         //set the setup for sender
 
         // Send an SMS (Requires version 3.4+)
-        final SmsFactory messageFactory = account.getSmsFactory();
+        final MessageFactory messageFactory = account.getMessageFactory();
         final List<NameValuePair> messageParams = new ArrayList<NameValuePair>();
-        messageParams.add(new BasicNameValuePair("To", "7608085735")); // Replace with a valid phone number
-        messageParams.add(new BasicNameValuePair("From", "(760) 808-5735")); // Replace with a valid phone number in your account
+        // Replace with a valid phone number
+        messageParams.add(new BasicNameValuePair("To", "+17608085735"));
+        // Replace with a valid phone number in your account
+        //+1 if possible
+        messageParams.add(new BasicNameValuePair("From", "+17602922950"));
         messageParams.add(new BasicNameValuePair("Body", "This is a test message!"));
 
         SmsManager manager = SmsManager.getDefault();
@@ -132,13 +134,13 @@ public class MainWindow extends AppCompatActivity {
 
         try
         {
-            messageFactory.create((Map<String, String>) messageParams);
+            com.twilio.sdk.resource.instance.Message sms = messageFactory.create(messageParams);
             //resp.getWriter().print(sms.getBody());
         }
         catch (TwilioRestException e)
         {
             //throw new Exception("Twilio error");
-
+            System.out.println("Error somewhere");
         }
     }
 
