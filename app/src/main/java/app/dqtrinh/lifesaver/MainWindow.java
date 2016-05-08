@@ -18,6 +18,7 @@ import com.twilio.sdk.*;
 import com.twilio.sdk.resource.factory.*;
 import com.twilio.sdk.resource.instance.*;
 import com.twilio.sdk.resource.list.*;
+import com.twilio.sdk.resource.factory.MessageFactory;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -123,14 +124,19 @@ public class MainWindow extends AppCompatActivity {
         String content = createContent(message, primaryContact,secondaryContact);
         TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
         com.twilio.sdk.resource.instance.Account account = client.getAccount();
-        MessageFactory messageFactory = account.getMessageFactory();
-        List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("To", "7608085735"));
-        params.add(new BasicNameValuePair("From", "7608085735"));
-        params.add(new BasicNameValuePair("Body", content));
+        //set the setup for sender
+
+        // Send an SMS (Requires version 3.4+)
+        final SmsFactory messageFactory = account.getSmsFactory();
+        final List<NameValuePair> messageParams = new ArrayList<NameValuePair>();
+        messageParams.add(new BasicNameValuePair("To", "7608085735")); // Replace with a valid phone number
+        messageParams.add(new BasicNameValuePair("From", "(760) 808-5735")); // Replace with a valid phone number in your account
+        messageParams.add(new BasicNameValuePair("Body", "This is a test message!"));
+
+
         try
         {
-            com.twilio.sdk.resource.instance.Message sms = messageFactory.create(params);
+            messageFactory.create((Map<String, String>) messageParams);
             //resp.getWriter().print(sms.getBody());
         }
         catch (TwilioRestException e)
