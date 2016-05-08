@@ -17,10 +17,10 @@
         android:background="@drawable/roundedbutton"
         android:contentDescription="obrazek"
         android:padding="5dp"
-        android:onClick="onClick"
         android:layout_marginTop="36dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick" />
 
     <Button
         android:layout_width="wrap_content"

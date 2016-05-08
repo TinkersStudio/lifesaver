@@ -60,7 +60,10 @@ public class MainWindow extends AppCompatActivity {
                 locationText = this.sendLocationText();
                 lattitude = this.latitude();
                 longtitude = this.longitude();
-                //sendSMS();
+                ArrayList<String> primaryContact = new ArrayList<String>();
+                ArrayList<String> secondaryContact = new ArrayList<String>();
+                sendSMS("something", "something", "something",
+                        primaryContact,secondaryContact);
                 //TODO: make the call to facebook
 
                 //TODO: Contact authority
@@ -108,16 +111,6 @@ public class MainWindow extends AppCompatActivity {
             }
         });
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_window);
-        //build setting button
-        editSetting();
-        //build messae
-        sendMessage();
-    }
-
 
     public void sendSMS(String infomation, String message, String location,
                         ArrayList<String>primaryContact,ArrayList<String>secondaryContact){
@@ -156,6 +149,16 @@ public class MainWindow extends AppCompatActivity {
     public void contactAuthority() {
         //TODO: Will notice 911 perhap. Need database
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_window);
+        //build setting button
+        editSetting();
+        //build messae
+        sendMessage();
     }
 }
 

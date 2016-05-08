@@ -193,6 +193,7 @@
         android:onClick="contactOnClick"
         android:background="@drawable/borderbutton"
         android:layout_below="@+id/editText4"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp" />
 
 </RelativeLayout>
