@@ -23,25 +23,26 @@
         android:text="Name"
         android:ems="10"
         android:id="@+id/nameField"
-        android:layout_below="@+id/scrollView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/border" />
+        android:background="@drawable/border"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/profileText"
+        android:layout_toEndOf="@+id/mednumberText"
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name :"
         android:id="@+id/nameText"
-        android:layout_alignTop="@+id/nameField"
-        android:layout_alignParentStart="true"
         android:textSize="30sp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact : "
+        android:text="Phone :"
         android:id="@+id/textView"
         android:layout_below="@+id/nameField"
         android:layout_alignParentStart="true"
@@ -55,49 +56,140 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/phoneField"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignStart="@+id/nameField"
         android:text="(123)456-7890"
-        android:background="@drawable/border" />
+        android:background="@drawable/border"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:textSize="30sp"
+        android:layout_alignStart="@+id/nameField" />
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/fbIcon"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/fbicon"
-        android:layout_below="@+id/phoneField"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:id="@+id/profileText"
+        android:textColor="#000000"
+        android:textSize="45sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medical Info"
+        android:id="@+id/textView2"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/nameText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insurance :"
+        android:id="@+id/insuranceText"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:layout_below="@+id/textView2"
+        android:layout_toEndOf="@+id/scrollView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:background="@drawable/border"
+        android:layout_alignBottom="@+id/insuranceText"
+        android:layout_alignEnd="@+id/phoneField"
+        android:layout_toEndOf="@+id/insuranceText"
+        android:layout_gravity="center|left"
+        android:layout_alignStart="@+id/phoneField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Med Num :"
+        android:id="@+id/mednumberText"
+        android:layout_marginTop="21dp"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/insuranceText"
+        android:layout_alignEnd="@+id/insuranceText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/mednumberText"
+        android:layout_alignStart="@+id/editText"
+        android:background="@drawable/border"
+        android:layout_alignTop="@+id/mednumberText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:id="@+id/textView3"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/editText3"
+        android:layout_toEndOf="@+id/mednumberText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address :"
+        android:id="@+id/addressField"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/mednumberText"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="500dp"
-        android:layout_height="50dp"
-        android:id="@+id/fbURL"
-        android:text="https://www.facebook.com/user_profile"
-        android:layout_alignTop="@+id/fbIcon"
-        android:layout_toEndOf="@+id/fbIcon"
-        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:layout_alignBottom="@+id/addressField"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
         android:background="@drawable/border" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/messageToSend"
-        android:text="Please type your messsage here."
-        android:layout_below="@+id/messageText"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/border" />
+        android:id="@+id/editText4"
+        android:background="@drawable/border"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/new_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/new_icon"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentEnd="true" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Message:"
-        android:id="@+id/messageText"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textIsSelectable="false"
-        android:layout_below="@+id/fbIcon"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="29dp" />
+        android:text="Contacts"
+        android:id="@+id/contactButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/editText4"
+        android:onClick="contactOnClick"
+        android:background="@drawable/borderbutton"/>
 
 </RelativeLayout>

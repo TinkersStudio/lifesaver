@@ -18,7 +18,7 @@
         android:contentDescription="obrazek"
         android:padding="5dp"
         android:onClick="onClick"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -43,7 +43,7 @@
         android:id="@+id/helpText"
         android:textColor="#ffffff"
         android:textSize="70sp"
-        android:layout_alignBottom="@+id/helpButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="89dp" />
+        android:layout_marginTop="94dp"
+        android:layout_alignTop="@+id/helpButton"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
