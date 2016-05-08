@@ -126,7 +126,7 @@ public class MainWindow extends AppCompatActivity {
         messageParams.add(new BasicNameValuePair("To", "7608085735"));
         // Replace with a valid phone number in your account
         //+1 if possible
-        messageParams.add(new BasicNameValuePair("From", "(760) 292-2950"));
+        messageParams.add(new BasicNameValuePair("From", "7602922950"));
         messageParams.add(new BasicNameValuePair("Body", "This is a test message!"));
 
 
