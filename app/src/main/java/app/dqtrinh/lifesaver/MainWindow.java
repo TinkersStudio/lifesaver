@@ -122,8 +122,11 @@ public class MainWindow extends AppCompatActivity {
         // Send an SMS (Requires version 3.4+)
         final SmsFactory messageFactory = account.getSmsFactory();
         final List<NameValuePair> messageParams = new ArrayList<NameValuePair>();
-        messageParams.add(new BasicNameValuePair("To", "7608085735")); // Replace with a valid phone number
-        messageParams.add(new BasicNameValuePair("From", "(760) 808-5735")); // Replace with a valid phone number in your account
+        // Replace with a valid phone number
+        messageParams.add(new BasicNameValuePair("To", "7608085735"));
+        // Replace with a valid phone number in your account
+        //+1 if possible
+        messageParams.add(new BasicNameValuePair("From", "(760) 292-2950"));
         messageParams.add(new BasicNameValuePair("Body", "This is a test message!"));
 
 
